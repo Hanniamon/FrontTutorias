@@ -14,18 +14,18 @@
 
 .detalles__video h3 {
     font-weight: 700;
-    color: #444444;
+    color: #ffffff;
 
 }
 
 .detalles__video p {
     font-size: 14px;
-    color: #444444;
+    color: #ffffff;
 
 }
 
 button {
-    background-color: #dfb66d;
+    background-color: #fbea72;
     color: white;
     padding: 15px 90px;
     border: none;
@@ -35,7 +35,7 @@ button {
 }
 
 button:hover {
-    background-color: #b57910;
+    background-color: #FFE325;
 }
 
 

@@ -6,12 +6,15 @@
   --gris-claro: #f0f0f0;
   --gris-texto: #4a4848;
   --dorado: #dfb66d;
+  --amarillo: #FFE366;
+  --amarillo-intenso: #FFE400;
+  --negro: #000000;
   box-sizing: border-box;
 }
 
 body {
   font-family: Roboto, Arial, Helvetica, sans-serif;
-  background-color: var(--gris-claro);
+  background-color: #000000;
   position: relative;
   width: 100%;
   height: 100vh;

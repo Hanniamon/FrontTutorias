@@ -9,7 +9,7 @@
     height: 63px;
     color: white;
     font-size: 16px;
-    background-color: var(--gris-claro);
+    background-color: var(--negro);
     padding: 0 20px;
     position: fixed;
     top: 80px;
@@ -20,7 +20,7 @@
 .superior__item {
     color: var(--gris-texto);
     font-size: 16px;
-    background-color: white;
+    background-color: var(--negro);
     border-radius: 20px;
     padding: 8px 20px;
     cursor: pointer;

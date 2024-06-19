@@ -1,12 +1,15 @@
 import './cursoVista.css';
+import ecuacionesImg from './ecuaciones.png';
 
 const CursoVista = () =>{
     return(
         <ul className="videos__container">
             <li className="videos__item">
-
-                < img src="./ecuaciones.png" alt="Ecuaciones" className="portada"/>
-
+                <img
+                    className="portada"
+                    src={ecuacionesImg}
+                    alt="Ecuaciones"
+                />
                 <div className="descripcion-video">
                     <div className="detalles__video">
                         <h3 className="curso-titulo">Algebra lineal</h3>
@@ -17,7 +20,7 @@ const CursoVista = () =>{
                     </div>
                 </div>
             </li>
-            </ul>
+        </ul>
     );
 }
 
