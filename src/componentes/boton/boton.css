@@ -1,0 +1,8 @@
+.boton{
+    border-radius: 10px;
+    font-weight: 700;
+    padding: 24px 32px;
+    border:none;
+    margin: 32px 0;
+    cursor: pointer;
+}
