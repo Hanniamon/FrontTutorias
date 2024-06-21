@@ -1,6 +1,7 @@
 import "./signup.css"
 import {Link, Outlet} from "react-router-dom";
 import React, {useState} from "react";
+import Home2 from "./home2";
 import { useNavigate } from 'react-router-dom';
 export function Login({ setUser }) {
     const [correo, setCorreo] = useState("");
@@ -29,7 +30,7 @@ export function Login({ setUser }) {
                 const data = await response.json();
                 setUser(data);
                 setError(false);
-                navigate('/'); // Redirige a la página principal después del inicio de sesión exitoso
+                navigate('/'); // Redirige a la página principal después del inicio de sesión
             } else {
                 setError(true);
             }
@@ -55,7 +56,9 @@ export function Login({ setUser }) {
 
                 </form>
                 {error && <p>Todos los campos son obligatorios</p>}
+
             </div>
+
         </section>
 
     );

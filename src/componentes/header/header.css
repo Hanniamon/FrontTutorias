@@ -40,7 +40,7 @@ body {
 
 .logo__item {
     color: #ffffff;
-    background-image: url(logotutorias.png);
+    background-image: url(logoup.png);
     background-repeat: no-repeat;
     padding: 25px 65px;
     cursor: pointer;
@@ -90,10 +90,9 @@ body {
 
 }
 .cabecera__notificaciones {
-    background-image: url(notificaciones.png);
     background-repeat: no-repeat;
     background-position: center;
-    padding: 13px 30px 13px 13px;
+    padding: 13px 13px 13px 13px;
     width: 5px;
     height: 5px;
 }
