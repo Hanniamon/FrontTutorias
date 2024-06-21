@@ -14,7 +14,7 @@ const CursoVista = () =>{
                     <div className="detalles__video">
                         <h3 className="curso-titulo">Ecuaciones diferenciales</h3>
                         <p className="curso-profesor">Un curso por Carlos Cruz</p>
-                        <p className="curso-descripcion">Aprende los conceptos básicos de algebra lineal</p>
+                        <p className="curso-descripcion">Aprende los conceptos básicos de ecuaciones diferenciales</p>
                         <p className="curso-alumnos">20 alumnos inscritos</p>
                         <button type="submit">Inscribir</button>
                     </div>
