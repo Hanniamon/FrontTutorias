@@ -1,5 +1,5 @@
 import React from 'react';
-import "./formulario.css"
+import "./formulario.css";
 import CampoTexto from "../CampoTexto/campoTexto";
 import OpcionesMateria from "../opcionesM/opcionesMa";
 import Boton from "../boton/boton";
@@ -10,6 +10,9 @@ const FormularioCursos= () => {
         console.log("Manejar el envio",e)
         //e-> es evento
     }
+
+
+
     return (<section className="formularioCurso">
         <form onSubmit={manejarEnvio}>
             <h2 >Crear nuevo curso</h2>

@@ -6,7 +6,7 @@ function Home() {
         <div>
             <Header/>
             <CursoVista/>
-
+            <CursoVista/>
         </div>
     );
 }

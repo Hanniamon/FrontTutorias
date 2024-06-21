@@ -1,0 +1,130 @@
+.sectionInicio{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #f8d121, #090606);
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+/*
+.header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+}*/
+
+.logo-container {
+    margin-right: 10px;
+}
+
+.logo {
+    width: 100px; /* Ajusta el tamaño del logo según tus necesidades */
+    height: auto;
+}
+
+.title-container {
+    background-color: rgba(61, 61, 61, 0.7); /* Gris */
+    padding: 10px 20px;
+    border-radius: 5px; /* Esquinas redondeadas */
+}
+
+.title-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff; /* Color del texto */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px; /* Ajustar ancho máximo para centrar mejor */
+    padding: 20px;
+}
+
+.login-register-form {
+    width: 100%;
+}
+
+.login-form,
+.register-form {
+    background-color: #fff;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    display: none; /* Ocultar ambos formularios inicialmente */
+    box-shadow: 0 4px 6px rgb(181, 121, 16); /* Añadir una sombra para mejor visibilidad */
+}
+
+.login-form.active,
+.register-form.active {
+     /* display block Mostrar el formulario activo */
+    display: block;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formInicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar todos los elementos del formulario */
+}
+
+.labelInicio {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    text-align: left; /* Alinear etiquetas a la izquierda */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 15px;
+}
+
+.buttonInicio {
+    background-color: #e6d26b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%; /* Botón ocupatodo el ancho */
+}
+
+.buttonInicio:hover {
+    background-color: #f8d121;
+}
+
+a {
+    color: #e6d26b;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    margin-top: 15px;
+    text-align: center;
+}
+
+
