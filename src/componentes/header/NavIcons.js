@@ -9,7 +9,7 @@ const NavIcons = ({user}) => {
         <div className="cabecera__iconos__item">
             <Link to="/formCurso" className="cabecera__cursos">Mis tutorías</Link>
             <Link to="/" className="cabecera__notificaciones"></Link>
-            <Link to="/signup" className="cabecera__a">{user}</Link>
+            <Link to="/signup" className="cabecera__a">Iniciar sesion</Link>
             <Outlet/>
 
         </div>

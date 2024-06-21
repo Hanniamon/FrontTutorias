@@ -1,23 +1,42 @@
 import "./signup.css"
 import {Link, Outlet} from "react-router-dom";
 import React, {useState} from "react";
-//import Signup from "./signup";
-export function Login ({setUser}) {
-    //const [nombre,setNombre]=useState("")
-    const [correo,setCorreo]=useState("")
-    const [contrasena,setContrasena]=useState("")
-    const [error,setError]=useState(false)
+import { useNavigate } from 'react-router-dom';
+export function Login({ setUser }) {
+    const [correo, setCorreo] = useState("");
+    const [contrasena, setContrasena] = useState("");
+    const [error, setError] = useState(false);
+    const navigate = useNavigate();
 
-    const handleSubmit = (e)=>{
-        e.preventDefault()
+    const handleSubmit = async (e) => {
+        e.preventDefault();
 
-        if (correo=== ""|| contrasena===""){
-            setError(true)
-            return
+        if (correo === "" || contrasena === "") {
+            setError(true);
+            return;
         }
-        setError(false)
-        setUser([correo])
-    }
+
+        try {
+            const response = await fetch('/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email: correo, password: contrasena }),
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                setUser(data);
+                setError(false);
+                navigate('/'); // Redirige a la página principal después del inicio de sesión exitoso
+            } else {
+                setError(true);
+            }
+        } catch (err) {
+            setError(true);
+        }
+    };
     return (
         <section className="sectionInicio">
             <div className="login-form active">
