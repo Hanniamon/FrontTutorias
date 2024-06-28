@@ -1,17 +1,26 @@
 import "./opcionesMa.css"
 
-const OpcionesMateria = () =>{
+const OpcionesMateria = (props) =>{
     //Método map -> arreglo.map(materia, index) =>{
     //return <option></option>})
     const materias = [
-        "Estructura de datos",
-        "Algebra linea",
-        "Ecuaciones diferenciales"
+        "Programación",
+        "Electronica",
+        "Cálculo",
+        "Humanidades",
+        "Comunicaciones",
+        "Física"
     ]
 
+
+    const manejarCambio=(e)=>{
+        console.log("cambio",e)
+        props.actualizarMaterias(e.target.value)
+    }
     return <div className="lista-opciones">
-        <label>Materias</label>
-        <select>
+        <label>Categoría: </label>
+        <select value={props.valor} onChange={manejarCambio}>
+            <option value=" " disabled defaultValue="" hidden>Seleccionar materia </option>
             { materias.map((materias,index)=>{
                 return<option key={index}>{materias}</option>
             })}

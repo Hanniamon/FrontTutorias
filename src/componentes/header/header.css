@@ -8,7 +8,7 @@
     --dorado: #dfb66d;
     --amarillo: #f8d121;
     --amarillo-intenso: #FFE400;
-    --negro: #000000;
+    --negro: #090606;
     box-sizing: border-box;
 }
 
@@ -38,8 +38,8 @@ body {
 }
 
 
-.logo__item {
-    color: #ffffff;
+.logo__itemh {
+    color: #f8d121;
     background-image: url(logoup.png);
     background-repeat: no-repeat;
     padding: 25px 65px;

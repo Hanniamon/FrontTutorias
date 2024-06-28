@@ -39,9 +39,11 @@ const SignUp = ({ setUser }) => {
 
     return (
         <section className="sectionInicio">
+
             <div className="login-form active">
+                <Link to="/" ><h1 className="logo__item">Tutorías UPIITA</h1></Link>
                 <h2 className="h2Inicio">Registrate</h2>
-                <form className="formInicio"  onSubmit={handleSubmit}>
+                <form className="formInicio" onSubmit={handleSubmit}>
                     <label className="labelInicio" htmlFor="name">Nombre completo:</label>
                     <input type="text"
                            value={nombre}

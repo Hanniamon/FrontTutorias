@@ -33,6 +33,7 @@ export function Login({ setUser }) {
                 navigate('/'); // Redirige a la página principal después del inicio de sesión
             } else {
                 setError(true);
+                console.log(response);
             }
         } catch (err) {
             setError(true);
@@ -40,13 +41,17 @@ export function Login({ setUser }) {
     };
     return (
         <section className="sectionInicio">
+
             <div className="login-form active">
+               <Link to="/" ><h1 className="logo__item">Tutorías UPIITA</h1></Link>
                 <h2 className="h2Inicio">Inicia sesión</h2>
                 <form className="formInicio" onSubmit={handleSubmit}>
                     <label className="labelInicio" htmlFor="email">Correo electrónico:</label>
-                    <input type="email" value={correo}  onChange={e=>setCorreo(e.target.value)} id="email" name="email" required/>
+                    <input type="email" value={correo} onChange={e => setCorreo(e.target.value)} id="email" name="email"
+                           required/>
                     <label className="labelInicio" htmlFor="password">Contraseña:</label>
-                    <input type="password" value={contrasena} onChange={e=>setContrasena(e.target.value)} id="password" name="password" required/>
+                    <input type="password" value={contrasena} onChange={e => setContrasena(e.target.value)}
+                           id="password" name="password" required/>
                     <button className="buttonInicio" type="submit">Iniciar sesión</button>
                     {/*<a href="#">¿Olvidaste tu contraseña?</a>*/}
 

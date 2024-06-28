@@ -28,6 +28,15 @@
     width: 100px; /* Ajusta el tamaño del logo según tus necesidades */
     height: auto;
 }
+.logo__item {
+    color: #090606;
+    background-image: url(../componentes/header/logoup.png);
+    background-repeat: no-repeat;
+    padding: 15px 65px;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
 
 .title-container {
     background-color: rgba(61, 61, 61, 0.7); /* Gris */
