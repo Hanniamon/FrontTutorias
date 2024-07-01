@@ -38,6 +38,21 @@
     margin-bottom: 30px;
 }
 
+.welcomeImage {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+}
+.welcomeText {
+    margin-top: 120px;
+    font-size: 4em;
+    font-weight: bold;
+
+    color: #fffcf9;
+}
 .title-container {
     background-color: rgba(61, 61, 61, 0.7); /* Gris */
     padding: 10px 20px;

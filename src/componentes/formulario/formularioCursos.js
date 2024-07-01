@@ -3,25 +3,28 @@ import "./formulario.css";
 import CampoTexto from "../CampoTexto/campoTexto";
 import OpcionesMateria from "../opcionesM/opcionesMa";
 import Boton from "../boton/boton";
-const FormularioCursos= () => {
-
-    const [nombre, actualizarNombre]=useState("")
-    const [imagen, actualizarImagen]=useState("")
+const FormularioCursos= (props) => {
+//ESte es mi formulario
+    const [nombreTutoria, actualizarNombre]=useState("")
+    const [foto, actualizarFoto]=useState("")
     const [profesion, actualizarProfesion]=useState("")
     const [descripcion, actualizarDescripcion]=useState("")
     const [materias,actualizarMaterias]=useState("")
 
+    const { registrarColaborador } = props
 
     const manejarEnvio=(e)=>{
         e.preventDefault()
         console.log("Manejar el envio")
         let datosaEnviar={
-            nombre,
-            imagen,
+            nombreTutoria,
+            foto,
             profesion,
-            descripcion
+            descripcion,
+            materias
         }
         console.log(datosaEnviar)
+        registrarColaborador(datosaEnviar)
         //e-> es evento
     }
 
@@ -33,14 +36,14 @@ const FormularioCursos= () => {
             <CampoTexto titulo="Nombre:"
                         placeholder="Ingresa el nombre del curso"
                         required
-                        valor={nombre}
+                        valor={nombreTutoria}
                         actualizarValor={actualizarNombre}
             />
             <CampoTexto titulo="Imagen:"
                         placeholder="Ingresa el enlace de foto"
                         required
-                        valor={imagen}
-                        actualizarValor={actualizarImagen}
+                        valor={foto}
+                        actualizarValor={actualizarFoto}
             />
             <CampoTexto titulo="Profesor:"
                         placeholder="Nombre de quien imparte el curso"
@@ -57,7 +60,7 @@ const FormularioCursos= () => {
             <OpcionesMateria
                 valor={materias}
                 actualizarMaterias={actualizarMaterias}
-
+                materias={props.materias}
             />
             <Boton>
                 Crear
