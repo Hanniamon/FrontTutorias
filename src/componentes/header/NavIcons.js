@@ -5,6 +5,8 @@ import {Link, Outlet} from "react-router-dom";
 //import SignUp from "../../paginas/signup";
 //Esta es la barra para cuando el usuario se encuentra dentro
 const NavIcons = ({user}) => {
+
+
     return (
         <div className="cabecera__iconos__item">
             <Link to="/formCurso" className="cabecera__cursos">Mis tutorías</Link>

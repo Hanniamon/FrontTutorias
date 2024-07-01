@@ -1,6 +1,6 @@
 import "./signup.css"
-import {Link, Outlet} from "react-router-dom";
-import React, {useState} from "react";
+import {Link, Outlet,useNavigate} from "react-router-dom";
+import React, {useState,useEffect} from "react";
 import axios from 'axios';
 import Home2 from "./home2";
 
@@ -10,6 +10,17 @@ const Login = ( )=> {
     const [correoInstitucional, setCorreoInstitucional] = useState('');
     const [contraseña, setContraseña] = useState('');
     const [error, setError] = useState('');
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        // Verifica si el usuario ya ha iniciado sesión
+        const loggedIn = localStorage.getItem('loggedIn');
+        if (loggedIn) {
+            navigate('/'); // Redirige a la página principal
+        }
+    }, [navigate]);
+
+
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -28,6 +39,8 @@ const Login = ( )=> {
                 // Guardar los datos del usuario en el estado global o localStorage
                 console.log('Inicio de sesión exitoso:', profesor);
                 // Redirigir al usuario a la página deseada, por ejemplo, el panel de control
+                localStorage.setItem('loggedIn', 'true');
+                navigate('/');
 
 
             } else {
@@ -52,7 +65,7 @@ const Login = ( )=> {
                     <input type="password" value={contraseña} onChange={e => setContraseña(e.target.value)}
                            id="password" name="password" required/>
                     {error && <p style={{ color: 'red' }}>{error}</p>}
-                    <Link to='/'><button className="buttonInicio" type="submit">Iniciar sesión</button></Link>
+                    <button className="buttonInicio" type="submit">Iniciar sesión</button>
                     {/*<a href="#">¿Olvidaste tu contraseña?</a>*/}
 
 

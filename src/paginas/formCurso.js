@@ -81,7 +81,7 @@ const FormCurso= () => {
             colorPrimario:"#e0fad4",
             colorSecundario:"#00f629"
         },
-        {   titulo:"Cálculo",
+        {   titulo:"Mátematicas",
             colorPrimario:"#ffffc5",
             colorSecundario:"#e8d800"
         },
