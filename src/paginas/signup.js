@@ -4,14 +4,14 @@ import {Link, Outlet} from "react-router-dom";
 import {useState} from "react";
 const SignUp = ({ setUser }) => {
     const [nombre, setNombre] = useState("");
-    const [correo, setCorreo] = useState("");
+    const [correoInstitucional, setCorreo] = useState("");
     const [contrasena, setContrasena] = useState("");
     const [error, setError] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        if (nombre === "" || correo === "" || contrasena === "") {
+        if (nombre === "" || correoInstitucional === "" || contrasena === "") {
             setError(true);
             return;
         }
@@ -22,7 +22,7 @@ const SignUp = ({ setUser }) => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ name: nombre, email: correo, password: contrasena }),
+                body: JSON.stringify({ name: nombre, email: correoInstitucional, password: contrasena }),
             });
 
             if (response.ok) {
@@ -54,7 +54,7 @@ const SignUp = ({ setUser }) => {
                     <label className="labelInicio" htmlFor="email">Correo electrónico:</label>
                     <input
                         type="email"
-                        value={correo}
+                        value={correoInstitucional}
                         onChange={e => setCorreo(e.target.value)}
                         id="email"
                         name="email"
@@ -68,7 +68,10 @@ const SignUp = ({ setUser }) => {
                         onChange={e => setContrasena(e.target.value)}
                         name="password"
                         required/>
-                    <button className="buttonInicio" type="submit">Registrarse</button>
+
+                    <Link to="/">
+                        <button className="buttonInicio" type="submit">Registrarse</button>
+                    </Link>
                     {/*<a href="#">¿Olvidaste tu contraseña?</a>*/}
 
 
