@@ -2,9 +2,6 @@ import "./signup.css"
 import {Link, Outlet,useNavigate} from "react-router-dom";
 import React, {useState,useEffect} from "react";
 import axios from 'axios';
-import Home2 from "./home2";
-
-
 
 const Login = ( )=> {
     const [correoInstitucional, setCorreoInstitucional] = useState('');
@@ -27,7 +24,7 @@ const Login = ( )=> {
         setError(''); // Reset error state
 
         try {
-            const response = await axios.get('http://18.188.198.40:3000/api/profesores');
+            const response = await axios.get('http://18.188.198.40:4000/api/profesores');
             const profesores = response.data;
 
             // Busca al profesor con el correo y la contraseña proporcionados

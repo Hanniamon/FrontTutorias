@@ -1,10 +1,15 @@
 
 import Header from "../componentes/header/header"
 import imagenUpiita from "./UPIITA_letras.jpg"
+import { useHistory } from "react-router-dom"
 import CursoVista from "../componentes/cursoVista/cursoVista"
 import Materias from "../componentes/Materias/materias";
 import React from "react";
 function Home({user}) {
+
+
+
+
     return (
         <div>
             <Header/>
@@ -21,7 +26,8 @@ function Home({user}) {
                 <h2>Por favor, inicia sesión o regístrate.</h2>
             )}
 
-        </div>
+    </div>
+
     );
 }
 

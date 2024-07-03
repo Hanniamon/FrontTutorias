@@ -1,5 +1,6 @@
 import './App.css';
 import {Routes,Route} from "react-router-dom"
+import Logout from './componentes/cerrarSesion/CerrarSesion';
 import Home from "./paginas/home";
 import FormCurso from "./paginas/formCurso"
 import SignUp from "./paginas/signup";
@@ -18,6 +19,7 @@ const App = ()=> {
                 <Route path="formCurso" element={<FormCurso/>} />
                 <Route path="signup"  element={<SignUp setUser={setUser} />}/>
                 <Route path="login" element={<Login setUser={setUser} />}/>
+
                 <Route path="/" element={<Home user={user} />} />
             </Routes>
         </div>
