@@ -3,7 +3,7 @@ import {Link, Outlet,useNavigate} from "react-router-dom";
 import React, {useState,useEffect} from "react";
 import axios from 'axios';
 
-const Login = ( )=> {
+const Login = ({setUser} )=> {
     const [correoInstitucional, setCorreoInstitucional] = useState('');
     const [contraseña, setContraseña] = useState('');
     const [error, setError] = useState('');
@@ -11,12 +11,12 @@ const Login = ( )=> {
 
     useEffect(() => {
         // Verifica si el usuario ya ha iniciado sesión
-        const loggedIn = localStorage.getItem('loggedIn');
+        const loggedIn = localStorage.getItem('user');
         if (loggedIn) {
+            setUser(JSON.parse(loggedIn));
             navigate('/'); // Redirige a la página principal
         }
-    }, [navigate]);
-
+    }, [navigate, setUser]);
 
 
     const handleLogin = async (e) => {
@@ -33,10 +33,12 @@ const Login = ( )=> {
             );
 
             if (profesor) {
+
+                const userDetails = await axios.get(`http://18.188.198.40:4000/api/profesores/${profesor.ID_Profesor}`);
+                localStorage.setItem('user', JSON.stringify(userDetails.data));
+                setUser(userDetails.data);
                 // Guardar los datos del usuario en el estado global o localStorage
                 console.log('Inicio de sesión exitoso:', profesor);
-                // Redirigir al usuario a la página deseada, por ejemplo, el panel de control
-                localStorage.setItem('loggedIn', 'true');
                 navigate('/');
 
 

@@ -1,12 +1,18 @@
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const Logout = () => {
+const Logout = ({setUser}) => {
+    const navigate = useNavigate();
+
+
     useEffect(() => {
-        // Elimina los datos del usuario de localStorage
-        localStorage.removeItem('usuario');
-        // Redirige al usuario a la página de inicio de sesión
-        window.location.href = '/login'; // Cambia '/login' a la ruta de tu página de inicio de sesión
-    }, []);
+
+        localStorage.removeItem('user');
+
+        setUser(null);
+        navigate('/login');
+
+    }, [navigate, setUser]);
 
     return null;
 };

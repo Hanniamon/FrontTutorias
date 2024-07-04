@@ -19,8 +19,8 @@ const App = ()=> {
                 <Route path="formCurso" element={<FormCurso/>} />
                 <Route path="signup"  element={<SignUp setUser={setUser} />}/>
                 <Route path="login" element={<Login setUser={setUser} />}/>
-
-                <Route path="/" element={<Home user={user} />} />
+                <Route path="logout" element={<Logout setUser={setUser} />} />
+                <Route path="/" element={<Home user={user} setUser={setUser} />} />
             </Routes>
         </div>
     );
